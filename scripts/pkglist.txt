@@ -1,5 +1,6 @@
 fish
 npm
+pyenv
 libreoffice-fresh
 bat
 ripgrep
