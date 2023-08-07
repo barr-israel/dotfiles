@@ -1,7 +1,9 @@
 fish
-fastfetch
+npm
+libreoffice-fresh
 bat
 ripgrep
 neovim
 btop
 nvtop
+fastfetch
