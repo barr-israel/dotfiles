@@ -24,6 +24,7 @@ end
 pyenv init - | source
 alias clear="clear & fastfetch --load-config paleofetch"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias dotfilesu='dotfiles add -u && dotfiles commit -m "dotfiles update" && dotfiles push'
 alias clear='clear && fastfetch --load-config paleofetch'
 alias cat='bat'
 alias grep='rg'
