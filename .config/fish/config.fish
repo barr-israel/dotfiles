@@ -23,7 +23,8 @@ function fish_right_prompt
 end
 pyenv init - | source
 alias clear="clear & fastfetch --load-config paleofetch"
-alias dotfiles='/usr/bin/git --git-dir=/home/barr/dotfiles/ --work-tree=/home/barr'
+alias dotfiles='/usr/bin/git --git-dir=~/dotfiles/ --work-tree=~'
 alias clear='clear && fastfetch --load-config paleofetch'
 alias cat='bat'
 alias grep='rg'
+alias n='nvim'

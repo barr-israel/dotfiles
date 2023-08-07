@@ -1,0 +1,6 @@
+fish
+fastfetch
+bat
+ripgrep
+neovim
+
