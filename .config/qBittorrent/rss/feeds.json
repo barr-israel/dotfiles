@@ -1,2 +1,10 @@
 {
+    "Nyaa - \"[ASW]\" - Torrent File RSS": {
+        "uid": "{ed7b65c0-5b74-4023-a3a4-b0c5951fcdf5}",
+        "url": "https://nyaa.si/?page=rss&c=0_0&f=0&q=[ASW]"
+    },
+    "Nyaa - Home - Torrent File RSS": {
+        "uid": "{061c1f0b-845f-469d-8cc0-9e8a31d3233f}",
+        "url": "https://nyaa.si/?page=rss"
+    }
 }
