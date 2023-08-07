@@ -3,4 +3,5 @@ fastfetch
 bat
 ripgrep
 neovim
-
+btop
+nvtop
