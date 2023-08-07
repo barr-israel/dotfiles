@@ -8,3 +8,5 @@ neovim
 btop
 nvtop
 fastfetch
+nextcloud-client
+keepassxc
