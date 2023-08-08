@@ -1,4 +1,5 @@
 "lua require('remap')
+inoremap <F16> <C-o>
 noremap <C-q> :q<CR>
 noremap <C-w> :w<CR>
 "pane movements

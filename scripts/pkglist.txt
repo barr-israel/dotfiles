@@ -10,3 +10,4 @@ nvtop
 fastfetch
 nextcloud-client
 keepassxc
+mpv
