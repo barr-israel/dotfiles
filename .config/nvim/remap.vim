@@ -51,7 +51,7 @@ nnoremap <S-Down> v<Down>
 inoremap <S-Down> <Esc>v<Down>
 nnoremap <S-Up> v<Up>
 inoremap <S-Up> <Esc>v<Up>
-"indent fix
+"move lines with indent fix
 nnoremap <C-Down>  :m+<CR>==
 inoremap <C-Down>  <C-o>:m+<CR><C-o>==
 vnoremap <C-Down>  :m '>+1<CR>gv=gv

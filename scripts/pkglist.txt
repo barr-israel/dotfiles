@@ -5,3 +5,4 @@ ripgrep
 neovim
 btop
 nvtop
+mpv
