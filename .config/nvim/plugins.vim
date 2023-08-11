@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'lambdalisue/suda.vim'
 Plug 'AlexvZyl/nordic.nvim', { 'branch': 'main' }
 Plug 'folke/tokyonight.nvim'
 Plug 'nvim-tree/nvim-web-devicons'

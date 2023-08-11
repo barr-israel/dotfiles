@@ -1,8 +1,16 @@
 fish
-fastfetch
+npm
+pyenv
+libreoffice-fresh
 bat
 ripgrep
 neovim
 btop
 nvtop
+<<<<<<< HEAD
+=======
+fastfetch
+nextcloud-client
+keepassxc
+>>>>>>> b7231122902e9f4a80902ffde3359bfbfe628aa0
 mpv
