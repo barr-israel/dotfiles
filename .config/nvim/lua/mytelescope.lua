@@ -1,15 +1,17 @@
 local builtin = require('telescope.builtin')
-vim.keymap.set({'n', 'v', 'i'}, '<M-e>', builtin.find_files, {})
-vim.keymap.set({'n', 'v', 'i'}, '<M-f>', builtin.live_grep, {})
-vim.keymap.set({'n', 'v', 'i'}, '<C-b>', builtin.buffers, {})
-vim.keymap.set({'n', 'v', 'i'}, '<M-g>', ":Telescope git_files<CR>", {noremap=true})
-vim.keymap.set({'n', 'v', 'i'}, '<M-d>', ":Telescope lsp_definitions<CR>", {})
-vim.keymap.set({'n', 'v', 'i'}, '<M-r>', ":Telescope lsp_references<CR>", {})
-vim.keymap.set({'n', 'v', 'i'}, '<M-s>', ":Telescope lsp_document_symbols<CR>", {})
+vim.keymap.set({ 'n', 'v', 'i' }, '<M-e>', builtin.find_files, {})
+vim.keymap.set({ 'n', 'v', 'i' }, '<M-f>', builtin.live_grep, {})
+vim.keymap.set({ 'n', 'v', 'i' }, '<C-b>', builtin.buffers, {})
+vim.keymap.set({ 'n' }, '<M-g>', ":Telescope git_files<CR>", { noremap = true })
+vim.keymap.set({ 'n' }, 'gd', ":Telescope lsp_definitions<CR>", {})
+vim.keymap.set({ 'n' }, 'gr', ":Telescope lsp_references<CR>", {})
+vim.keymap.set({ 'n' }, 'gs', ":Telescope lsp_document_symbols<CR>", {})
+vim.keymap.set({ 'n' }, 'gs', ":Telescope lsp_document_symbols<CR>", {})
+vim.keymap.set({ 'n' }, 'go', ":Telescope lsp_type_definitionsCR>", {})
 local actions = require("telescope.actions")
 local action_layout = require("telescope.actions.layout")
 local fb_actions = require("telescope").extensions.file_browser.actions
-require("telescope").setup{
+require("telescope").setup {
     defaults = {
         mappings = {
             n = {
@@ -24,25 +26,26 @@ require("telescope").setup{
         preview = {
             mime_hook = function(filepath, bufnr, opts)
                 local is_image = function(filepath)
-                    local image_extensions = {'png','jpg'}   -- Supported image formats
-                    local split_path = vim.split(filepath:lower(), '.', {plain=true})
+                    local image_extensions = { 'png', 'jpg' } -- Supported image formats
+                    local split_path = vim.split(filepath:lower(), '.', { plain = true })
                     local extension = split_path[#split_path]
                     return vim.tbl_contains(image_extensions, extension)
                 end
                 if is_image(filepath) then
                     local term = vim.api.nvim_open_term(bufnr, {})
-                    local function send_output(_, data, _ )
+                    local function send_output(_, data, _)
                         for _, d in ipairs(data) do
-                            vim.api.nvim_chan_send(term, d..'\r\n')
+                            vim.api.nvim_chan_send(term, d .. '\r\n')
                         end
                     end
                     vim.fn.jobstart(
-                    {
-                        'chafa', '--center=on', filepath  -- Terminal image viewer command
-                    }, 
-                    {on_stdout=send_output, stdout_buffered=true, pty=true, width=80, height=100})
+                        {
+                            'chafa', '--center=on', filepath -- Terminal image viewer command
+                        },
+                        { on_stdout = send_output, stdout_buffered = true, pty = true, width = 80, height = 100 })
                 else
-                    require("telescope.previewers.utils").set_preview_message(bufnr, opts.winid, "Binary cannot be previewed")
+                    require("telescope.previewers.utils").set_preview_message(bufnr, opts.winid,
+                        "Binary cannot be previewed")
                 end
             end
         },
@@ -91,6 +94,6 @@ require("telescope").setup{
     },
 }
 require("telescope").load_extension("file_browser")
-vim.keymap.set({'n', 'v', 'i'}, '<C-e>', ":Telescope file_browser path=%:h select_buffer=true<CR>", {noremap=true})
+vim.keymap.set({ 'n', 'v', 'i' }, '<C-e>', ":Telescope file_browser path=%:h select_buffer=true<CR>", { noremap = true })
 require("telescope").load_extension("undo")
-vim.keymap.set({'n', 'v', 'i'}, '<C-u>', ":Telescope undo<CR>", {noremap=true})
+vim.keymap.set({ 'n', 'v', 'i' }, '<C-u>', ":Telescope undo<CR>", { noremap = true })

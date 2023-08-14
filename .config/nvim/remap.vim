@@ -2,6 +2,7 @@
 inoremap <F16> <C-o>
 noremap <C-q> :q<CR>
 noremap <C-w> :w<CR>
+noremap <F3> :Black<CR>
 "pane movements
 noremap <M-l> <C-w>l
 noremap <M-Right> <C-w><Right>
@@ -35,15 +36,16 @@ vnoremap / y/<C-r>"<CR>
 vnoremap ? y?<C-r>"<CR>
 noremap <C-s> :%s///g<Left><Left><Left>
 vnoremap <C-s> y:%s/<C-r>"//g<Left><Left>
+vnoremap s :%s/\%V//g<Left><Left><Left>
 "better selection
-nnoremap <S-C-Down> V<Down>
-inoremap <S-C-Down> <Esc>V<Down>
-nnoremap <S-C-Up> V<Up>
-inoremap <S-C-Up> <Esc>V<Up>
-nnoremap <S-C-Left> <C-v><Left>
-inoremap <S-C-Left> <Esc><C-v><Left>
-nnoremap <S-C-Right> <C-v><Right>
-inoremap <S-C-Right> <Esc><C-v><Right>
+nnoremap <C-Down> V<Down>
+inoremap <C-Down> <Esc>V<Down>
+nnoremap <C-Up> V<Up>
+inoremap <C-Up> <Esc>V<Up>:Telescope file_browser path=%:h select_buffer=true
+nnoremap <C-S-Left> <C-v><Left>
+inoremap <C-S-Left> <Esc><C-v><Left>
+nnoremap <C-S-Right> <C-v><Right>
+inoremap <C-S-Right> <Esc><C-v><Right>
 nnoremap <S-Left> v<Left>
 inoremap <S-Left> <Esc>v<Left>
 nnoremap <S-Right> v<Right>
@@ -53,9 +55,9 @@ inoremap <S-Down> <Esc>v<Down>
 nnoremap <S-Up> v<Up>
 inoremap <S-Up> <Esc>v<Up>
 "indent fix
-nnoremap <C-Down>  :m+<CR>==
-inoremap <C-Down>  <C-o>:m+<CR><C-o>==
-vnoremap <C-Down>  :m '>+1<CR>gv=gv
-nnoremap <C-Up>  :m-2<CR>==
-inoremap <C-Up>  <C-o>:m-2<CR><C-o>==
-vnoremap <C-Up> :m '<-2<CR>gv=gv
+nnoremap <C-S-Down>  :m+<CR>==
+inoremap <C-S-Down>  <C-o>:m+<CR><C-o>==
+vnoremap <C-S-Down>  :m '>+1<CR>gv=gv
+nnoremap <C-S-Up>  :m-2<CR>==
+inoremap <C-S-Up>  <C-o>:m-2<CR><C-o>==
+vnoremap <C-S-Up> :m '<-2<CR>gv=gv

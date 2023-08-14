@@ -25,8 +25,10 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'     " Required
 Plug 'hrsh7th/cmp-nvim-lsp' " Required
 Plug 'L3MON4D3/LuaSnip'     " Required
-
+Plug 'psf/black', {'branch': 'stable'}
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
+Plug 'kosayoda/nvim-lightbulb'
+Plug 'weilbith/nvim-code-action-menu'
 call plug#end()
 lua require('mytelescope')
 lua require('myplugins')
