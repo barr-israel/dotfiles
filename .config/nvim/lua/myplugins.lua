@@ -38,3 +38,8 @@ vim.keymap.set({'n', 'v', 'i'}, '<C-g>', ":Neogit<CR>", {noremap=true})
 require("nvim-lightbulb").setup({ autocmd = { enabled = true }, sign = { enabled = false}, virtual_text = {enabled = true, text='A'}})
 code_action_menu = require('code_action_menu')
 vim.keymap.set({'n'}, '<F4>', code_action_menu.open_code_action_menu, {})
+lint = require('lint')
+lint.linters_by_ft = {
+  python = {'pycodestyle',}
+}
+vim.keymap.set({'n'}, '<F5>', lint.try_lint, {})

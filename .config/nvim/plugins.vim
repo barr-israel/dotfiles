@@ -29,6 +29,7 @@ Plug 'psf/black', {'branch': 'stable'}
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v2.x'}
 Plug 'kosayoda/nvim-lightbulb'
 Plug 'weilbith/nvim-code-action-menu'
+Plug 'mfussenegger/nvim-lint'
 call plug#end()
 lua require('mytelescope')
 lua require('myplugins')
