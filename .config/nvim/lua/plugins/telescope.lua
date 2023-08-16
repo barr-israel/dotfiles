@@ -1,10 +1,18 @@
 return {
   "nvim-telescope/telescope.nvim",
   keys = {
-    -- disable the keymap to grep files
-    -- change a keymap
-    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Open Buffers" },
-    { "<leader>fB", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find In Buffer" },
-    -- add a keymap to browse plugin files
+    { "<leader>sb", "<cmd>Telescope buffers<cr>", desc = "Open Buffers" },
+    { "<leader>sB", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find In Buffer" },
+  },
+  opts = {
+    defaults = {
+      mappings = {
+        i = {
+          ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
+          ["<C-c>"] = "delete_buffer",
+          ["<esc>"] = "close",
+        },
+      },
+    },
   },
 }
