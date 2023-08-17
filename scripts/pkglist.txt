@@ -1,4 +1,5 @@
 fish
+kitty
 npm
 pyenv
 libreoffice-fresh
