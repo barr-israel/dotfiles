@@ -36,4 +36,18 @@ return {
       },
     },
   },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    enabled = false,
+  },
+  {
+    "nvim-telescope/telescope-file-browser.nvim",
+    config = function()
+      require("telescope").load_extension("file_browser")
+    end,
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    keys = {
+      { "<leader>e", "<cmd>Telescope file_browser path=%:p:h se;ect_buffer=true<CR>", desc = "Telescope File Browser" },
+    },
+  },
 }
