@@ -8,8 +8,8 @@ ripgrep
 neovim
 btop
 nvtop
-fastfetch
 nextcloud-client
+neofetch
 keepassxc
 mpv
 qbittorrent
