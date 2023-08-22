@@ -51,5 +51,25 @@ return {
     keys = {
       { "<leader>e", "<cmd>Telescope file_browser path=%:p:h se;ect_buffer=true<CR>", desc = "Telescope File Browser" },
     },
+    {
+      "echasnovski/mini.surround",
+      opts = {
+        mappings = {
+          add = "ss", -- Add surrounding in Normal and Visual modes
+          delete = "sd", -- Delete surrounding
+          find = "sf", -- Find surrounding (to the right)
+          find_left = "sF", -- Find surrounding (to the left)
+          highlight = "sh", -- Highlight surrounding
+          replace = "sr", -- Replace surrounding
+          update_n_lines = "sn", -- Update `n_lines`
+        },
+      },
+    },
+    {
+      "folke/flash.nvim",
+      keys = {
+        { "s", mode = { "n", "x", "o" }, false },
+      },
+    },
   },
 }
