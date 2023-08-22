@@ -10,6 +10,7 @@ return {
       { "<leader>sb", "<cmd>Telescope buffers<cr>", desc = "Open Buffers" },
       { "<leader>sB", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find In Buffer" },
     },
+
     opts = {
       defaults = {
         mappings = {
@@ -20,20 +21,21 @@ return {
           },
         },
       },
+      extensions = {
+        file_browser = {
+          --theme = "ivy",
+          hijack_netrw = true,
+          cwd_to_path = true,
+          hidden = true,
+          prompt_path = true,
+        },
+      },
     },
   },
   {
     "mbbill/undotree",
     keys = {
       { "<C-u>", "<cmd>UndotreeToggle<CR><cmd>UndotreeFocus<CR>", desc = "Toggle Undo Tree" },
-    },
-  },
-  {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "clangd",
-      },
     },
   },
   {
