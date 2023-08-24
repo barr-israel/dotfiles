@@ -13,3 +13,5 @@ neofetch
 keepassxc
 mpv
 qbittorrent
+fd
+fzf
