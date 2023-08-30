@@ -15,3 +15,5 @@ mpv
 qbittorrent
 fd
 fzf
+lazygit
+ttf-jetbrains-mono-nerd
