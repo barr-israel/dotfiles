@@ -40,6 +40,7 @@ return {
     },
     keys = {
       { "<leader>sb", "<cmd>Telescope buffers<cr>", desc = "Open Buffers" },
+      { "<leader>B", "<cmd>Telescope buffers<cr>", desc = "Open Buffers" },
       { "<leader>sB", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find In Buffer" },
     },
 
@@ -102,6 +103,27 @@ return {
       dap_enabled = true,
       -- name = "venv",
       -- auto_refresh = false
+    },
+  },
+  {
+    "akinsho/bufferline.nvim",
+    opts = {
+      options = {},
+    },
+    keys = {
+      { "B", mode = { "n", "v" }, require("bufferline").pick },
+    },
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      sections = {
+        lualine_z = {
+          function()
+            return " " .. os.date("%H:%M:%S")
+          end,
+        },
+      },
     },
   },
 }
