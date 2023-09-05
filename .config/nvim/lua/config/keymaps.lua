@@ -12,3 +12,4 @@ local function map(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, options)
 end
 map("i", "<F16>", "<C-o>", { desc = "Execute normal command and go back to insert mode" })
+map("n", "<C-q>", "<cmd>q<CR>", { desc = "Close pane" })
