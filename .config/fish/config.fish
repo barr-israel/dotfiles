@@ -30,4 +30,5 @@ alias grep='rg'
 alias n='nvim'
 alias yayu='yay --noconfirm'
 alias ls='lsd -lh'
+alias tmux='tmux -u'
 fzf_key_bindings
