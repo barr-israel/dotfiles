@@ -4,7 +4,4 @@
 local opt = vim.opt
 opt.shell = "/usr/bin/fish"
 opt.clipboard = "unnamedplus"
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
 opt.spell = true
