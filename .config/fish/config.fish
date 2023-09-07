@@ -29,4 +29,5 @@ alias cat='bat'
 alias grep='rg'
 alias n='nvim'
 alias yayu='yay --noconfirm'
-alias ls='ls -lh'
+alias ls='lsd -lh'
+fzf_key_bindings

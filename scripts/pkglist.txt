@@ -17,3 +17,4 @@ fd
 fzf
 lazygit
 ttf-jetbrains-mono-nerd
+lsd
