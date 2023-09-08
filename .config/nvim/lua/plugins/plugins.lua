@@ -5,18 +5,19 @@ return {
     opts = { style = "night" },
   },
   {
+    "mbbill/undotree",
+    config = function()
+      vim.g["undotree_SetFocusWhenToggle"] = 1
+      vim.g["undotree_WindowLayout"] = 2
+    end,
+    keys = {
+      { "<C-u>", "<cmd>UndotreeToggle<CR>", "Undo Tree Toggle" },
+    },
+  },
+  {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      {
-        "debugloop/telescope-undo.nvim",
-        config = function()
-          require("telescope").load_extension("undo")
-        end,
-        keys = {
-          { "<C-u>", ":Telescope undo<CR>", desc = "Telescope Undo" },
-        },
-      },
       {
         "nvim-telescope/telescope-file-browser.nvim",
         config = function()
@@ -63,13 +64,6 @@ return {
           cwd_to_path = true,
           hidden = true,
           prompt_path = true,
-        },
-        undo = {
-          side_by_side = true,
-          layout_strategy = "vertical",
-          layout_config = {
-            preview_height = 0.8,
-          },
         },
       },
     },
