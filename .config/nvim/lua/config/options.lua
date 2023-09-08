@@ -5,3 +5,4 @@ local opt = vim.opt
 opt.shell = "/usr/bin/fish"
 opt.clipboard = "unnamedplus"
 opt.spell = true
+opt.swapfile = false

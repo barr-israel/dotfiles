@@ -20,3 +20,9 @@ map("n", "<C-Down>", ":m +1<CR>==", { desc = "Move Line Down" })
 map("n", "<C-Up>", ":m -2<CR>==", { desc = "Move Line Up" })
 map("i", "<C-Down>", "<C-o><C-Down>", { desc = "Move Line Down" })
 map("i", "<C-Up>", "<C-o><C-Up>", { desc = "Move Line Up" })
+map("n", "M", "`", { desc = "Move to mark" })
+map("n", "J", "mzJ`z") -- concatenate lines without moving cursor
+map("n", "n", "nzz") -- center next result
+map("n", "N", "Nzz") -- center prev result
+map("n", "R", ":%s/", { desc = "Replace" })
+map("v", "R", 'y:%s/<c-r>"/', { desc = "Replace selection" })
