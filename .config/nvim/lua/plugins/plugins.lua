@@ -97,7 +97,8 @@ return {
     dependencies = { "neovim/nvim-lspconfig", "nvim-telescope/telescope.nvim", "mfussenegger/nvim-dap-python" },
     opts = {
       dap_enabled = true,
-      -- name = "venv",
+      name = "3.*",
+      path = os.getenv("HOME") .. "/.pyenv/versions/",
       -- auto_refresh = false
     },
   },
