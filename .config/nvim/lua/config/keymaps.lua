@@ -26,5 +26,7 @@ map("n", "n", "nzz") -- center next result
 map("n", "N", "Nzz") -- center prev result
 map("n", "R", ":%s/", { desc = "Replace" })
 map("v", "R", 'y:%s/<c-r>"/', { desc = "Replace selection" })
+map({ "n", "v" }, "<c-r>", ":s///g<Left><Left><Left>", { desc = "Replace in line" })
+map("n", "U", ":red<cr>")
 map("n", "<PageDown>", "<C-f>zz", { desc = "Page up and center" })
 map("n", "<PageUp>", "<C-b>zz", { desc = "Page down and center" })
