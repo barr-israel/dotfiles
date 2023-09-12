@@ -18,8 +18,8 @@ map("v", "<C-S-Down>", ":m '>+1<CR>gv=gv", { desc = "Move Selection Down" })
 map("v", "<C-S-Up>", ":m '<-2<CR>gv=gv", { desc = "Move Selection Up" })
 map("n", "<C-S-Down>", ":m +1<CR>==", { desc = "Move Line Down" })
 map("n", "<C-S-Up>", ":m -2<CR>==", { desc = "Move Line Up" })
-map("i", "<C-S-Down>", "<C-o><C-Down>", { desc = "Move Line Down" })
-map("i", "<C-S-Up>", "<C-o><C-Up>", { desc = "Move Line Up" })
+map("i", "<C-S-Down>", "<C-o>:m +1<CR><C-o>==", { desc = "Move Line Down" })
+map("i", "<C-S-Up>", "<C-o>:m -2<CR><C-o>==", { desc = "Move Line Up" })
 map("n", "M", "`", { desc = "Move to mark" })
 map("n", "J", "mzJ`z") -- concatenate lines without moving cursor
 map("n", "n", "nzz") -- center next result
