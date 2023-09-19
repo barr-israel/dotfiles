@@ -43,7 +43,6 @@ return {
       { "<leader>sb", "<cmd>Telescope buffers<cr>", desc = "Open Buffers" },
       { "<leader>B", "<cmd>Telescope buffers<cr>", desc = "Open Buffers" },
       { "<leader>sB", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Fuzzy Find In Buffer" },
-      { "<leader>so", "<cmd>Telescope oldfiles<cr>", desc = "Telescope Old Files" },
       { "<leader>sr", "<cmd>Telescope registers<cr>", desc = "Telescope Registers" },
     },
 
@@ -123,4 +122,5 @@ return {
       },
     },
   },
+  { "nvim-pack/nvim-spectre", enabled = false },
 }
