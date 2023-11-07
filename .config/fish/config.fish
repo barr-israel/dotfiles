@@ -21,6 +21,7 @@ function fish_right_prompt
     set_color normal
 end
 pyenv init - | source
+set -Ua fish_user_paths $HOME/.cargo/bin
 alias clear="clear & fastfetch --load-config paleofetch"
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias dotfilesu='dotfiles pull && dotfiles add -u && dotfiles commit -m "dotfiles update" && dotfiles push'
