@@ -24,9 +24,9 @@ map("n", "M", "`", { desc = "Move to mark" })
 map("n", "J", "mzJ`z") -- concatenate lines without moving cursor
 map("n", "n", "nzz") -- center next result
 map("n", "N", "Nzz") -- center prev result
-map("n", "R", ":%s/", { desc = "Replace" })
+map("n", "R", ":s/", { desc = "Replace in line" })
 map("v", "R", 'y:%s/<c-r>"/', { desc = "Replace selection" })
-map("n", "<c-r>", ":s/", { desc = "Replace in line" })
+map("n", "<c-r>", ":%s/", { desc = "Replace" })
 map("v", "<c-r>", ":s/", { desc = "Replace in selection" })
 map("n", "U", ":red<cr>")
 map("n", "<PageDown>", "<C-f>zz", { desc = "Page up and center" })
