@@ -1,6 +1,6 @@
 fish
+tmux
 kitty
-npm
 pyenv
 libreoffice-fresh
 bat
