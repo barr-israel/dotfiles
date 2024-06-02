@@ -11,7 +11,3 @@ vim.api.nvim_create_autocmd({
     vim.fn.setenv("PYTHONPATH", vim.fn.getenv("PWD"))
   end,
 })
-vim.api.nvim_create_autocmd(
-  { "InsertLeave" },
-  { desc = "End snippet when leaving insert mode", callback = require("luasnip").unlink_current }
-)

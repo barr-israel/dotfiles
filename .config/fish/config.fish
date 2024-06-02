@@ -1,5 +1,24 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    export FZF_CTRL_T_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'bat -n --color=always {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+    export FZF_ALT_C_OPTS="
+  --walker-skip .git,node_modules,target
+  --preview 'tree -C {}'
+  --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+    alias clear="clear & fastfetch --load-config paleofetch"
+    alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+    alias dotfilesu='dotfiles pull && dotfiles add -u && dotfiles commit -m "dotfiles update" && dotfiles push'
+    alias clear='clear && fastfetch --load-config paleofetch'
+    alias cat='bat'
+    alias grep='rg'
+    alias n='nvim'
+    alias yayu='yay --noconfirm'
+    alias ls='lsd -lh'
+    alias tmux='tmux -u'
+    alias icat='kitten icat'
+    fzf_key_bindings
 end
 function fish_greeting
 end
@@ -22,14 +41,3 @@ function fish_right_prompt
 end
 pyenv init - | source
 set -Ua fish_user_paths $HOME/.cargo/bin
-alias clear="clear & fastfetch --load-config paleofetch"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias dotfilesu='dotfiles pull && dotfiles add -u && dotfiles commit -m "dotfiles update" && dotfiles push'
-alias clear='clear && fastfetch --load-config paleofetch'
-alias cat='bat'
-alias grep='rg'
-alias n='nvim'
-alias yayu='yay --noconfirm'
-alias ls='lsd -lh'
-alias tmux='tmux -u'
-fzf_key_bindings
