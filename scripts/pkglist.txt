@@ -18,3 +18,4 @@ fzf
 lazygit
 ttf-jetbrains-mono-nerd
 lsd
+tree
