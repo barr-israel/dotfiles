@@ -17,7 +17,7 @@ if status is-interactive
     alias yayu='yay --noconfirm'
     alias ls='lsd -lh'
     alias tmux='tmux -u'
-    alias icat='kitten icat'
+    alias imgcat='wezterm imgcat'
     fzf_key_bindings
 end
 function fish_greeting

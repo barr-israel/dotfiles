@@ -1,4 +1,5 @@
 fish
+wezterm
 tmux
 kitty
 pyenv
@@ -16,6 +17,5 @@ qbittorrent
 fd
 fzf
 lazygit
-ttf-jetbrains-mono-nerd
 lsd
 tree
