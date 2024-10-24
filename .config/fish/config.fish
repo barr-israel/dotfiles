@@ -39,5 +39,6 @@ function fish_right_prompt
     echo -n " ~ " (date +%H:%M:%S)
     set_color normal
 end
+set EDITOR nvim
 pyenv init - | source
-set -Ua fish_user_paths $HOME/.cargo/bin
+source "$HOME/.cargo/env.fish"
