@@ -9,7 +9,7 @@ if status is-interactive
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
     alias clear="clear & fastfetch --load-config paleofetch"
     alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-    alias dotfilesu='dotfiles pull && dotfiles add -u && dotfiles commit -m "dotfiles update" && dotfiles push'
+    alias dotfilesu='dotfiles diff --name-only && dotfiles pull && dotfiles add -u && dotfiles commit -m "dotfiles update" && dotfiles push'
     alias clear='clear && fastfetch --load-config paleofetch'
     alias cat='bat'
     alias grep='rg'
