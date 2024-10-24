@@ -41,4 +41,3 @@ function fish_right_prompt
 end
 set EDITOR nvim
 pyenv init - | source
-source "$HOME/.cargo/env.fish"
