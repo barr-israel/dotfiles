@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 config.unix_domains = { { name = "unix" } }
--- config.default_gui_startup_args = { "connect", "unix", "fish", "--init-command", "btop" }
+config.default_gui_startup_args = { "connect", "unix", "fish", "--init-command", "btop" }
 config.color_scheme = "Tokyo Night"
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true

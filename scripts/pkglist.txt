@@ -1,16 +1,13 @@
 fish
 wezterm
-tmux
-kitty
 pyenv
-libreoffice-fresh
+libreoffice-still
 bat
 ripgrep
 neovim
 btop
 nvtop
 nextcloud-client
-neofetch
 keepassxc
 mpv
 qbittorrent
