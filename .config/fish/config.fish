@@ -7,7 +7,6 @@ if status is-interactive
   --walker-skip .git,node_modules,target
   --preview 'tree -C {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
-    alias clear="clear & fastfetch --load-config paleofetch"
     alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
     alias dotfilesu='dotfiles diff --name-only && dotfiles pull && dotfiles add -u && dotfiles commit -m "dotfiles update" && dotfiles push'
     alias clear='clear && fastfetch --load-config paleofetch'
@@ -16,7 +15,6 @@ if status is-interactive
     alias n='nvim'
     alias yayu='yay --noconfirm'
     alias ls='lsd -lh'
-    alias tmux='tmux -u'
     alias imgcat='wezterm imgcat'
     fzf_key_bindings
 end
