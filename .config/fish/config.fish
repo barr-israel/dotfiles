@@ -16,6 +16,7 @@ if status is-interactive
     alias yayu='yay --noconfirm'
     alias ls='lsd -lh'
     alias imgcat='wezterm imgcat'
+    alias yayfile='yay -F'
     fzf_key_bindings
 end
 #function fish_right_prompt
@@ -36,4 +37,6 @@ end
 #    set_color normal
 #end
 set EDITOR nvim
+set FZF_CTRL_T_COMMAND 'rg --files'
+set FZF_ALT_C_COMMAND 'find . -type d -not -path "*/.*"'
 pyenv init - | source

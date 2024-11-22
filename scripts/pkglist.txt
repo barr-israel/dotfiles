@@ -16,3 +16,4 @@ fzf
 lazygit
 lsd
 tree
+kolourpaint
