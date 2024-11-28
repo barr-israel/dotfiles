@@ -1,1 +1,0 @@
-wezterm-mux-server --daemonize

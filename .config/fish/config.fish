@@ -1,4 +1,6 @@
 if status is-interactive
+    set FZF_CTRL_T_COMMAND fd
+    set FZF_ALT_C_COMMAND 'fd --type d'
     export FZF_CTRL_T_OPTS="
   --walker-skip .git,node_modules,target
   --preview 'bat -n --color=always {}'
@@ -7,11 +9,13 @@ if status is-interactive
   --walker-skip .git,node_modules,target
   --preview 'tree -C {}'
   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+    batman --export-env | source
     alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
     alias dotfilesu='dotfiles diff --name-only && dotfiles pull && dotfiles add -u && dotfiles commit -m "dotfiles update" && dotfiles push'
     alias clear='clear && fastfetch --load-config paleofetch'
     alias cat='bat'
     alias grep='rg'
+    alias find='fd'
     alias n='nvim'
     alias yayu='yay --noconfirm'
     alias ls='lsd -lh'
@@ -37,6 +41,4 @@ end
 #    set_color normal
 #end
 set EDITOR nvim
-set FZF_CTRL_T_COMMAND 'rg --files'
-set FZF_ALT_C_COMMAND 'find . -type d -not -path "*/.*"'
 pyenv init - | source

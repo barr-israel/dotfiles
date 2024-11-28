@@ -17,3 +17,5 @@ lazygit
 lsd
 tree
 kolourpaint
+bat-extra
+entr
