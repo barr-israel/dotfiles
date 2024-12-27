@@ -4,9 +4,13 @@ unfocused-split-fill=#111111
 quit-after-last-window-closed=false
 adw-toolbar-style=raised
 gtk-tabs-location=bottom
+window-theme=ghostty
 gtk-titlebar=false
-#copy-on-select=false
-#mouse-scroll-multiplier=2
+window-padding-x=0
+window-padding-y=0
+window-padding-balance=true
+mouse-scroll-multiplier=0.5
+auto-update=off
 
 # Keybinds
 keybind=ctrl+shift+z=toggle_split_zoom
@@ -16,8 +20,8 @@ keybind=ctrl+shift+left=goto_split:left
 keybind=ctrl+shift+right=goto_split:right
 keybind=ctrl+shift+x=close_surface
 keybind=ctrl+shift+w=close_window
-keybind=ctrl+shift+|=new_split:right
 keybind=ctrl+shift+alt+|=new_split:left
+keybind=ctrl+shift+|=new_split:right
 keybind=ctrl+shift+'=new_split:down
 keybind=ctrl+shift+alt+'=new_split:up
 keybind=ctrl+shift+alt+tab=toggle_tab_overview
