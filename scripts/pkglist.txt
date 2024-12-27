@@ -1,5 +1,5 @@
 fish
-wezterm
+ghostty
 pyenv
 libreoffice-still
 bat
@@ -19,3 +19,4 @@ tree
 kolourpaint
 bat-extra
 entr
+chafa

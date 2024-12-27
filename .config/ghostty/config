@@ -1,0 +1,33 @@
+theme=tokyonight
+gtk-single-instance=true
+unfocused-split-fill=#111111
+quit-after-last-window-closed=false
+adw-toolbar-style=raised
+gtk-tabs-location=bottom
+gtk-titlebar=false
+#copy-on-select=false
+#mouse-scroll-multiplier=2
+
+# Keybinds
+keybind=ctrl+shift+z=toggle_split_zoom
+keybind=ctrl+shift+up=goto_split:top
+keybind=ctrl+shift+down=goto_split:bottom
+keybind=ctrl+shift+left=goto_split:left
+keybind=ctrl+shift+right=goto_split:right
+keybind=ctrl+shift+x=close_surface
+keybind=ctrl+shift+w=close_window
+keybind=ctrl+shift+|=new_split:right
+keybind=ctrl+shift+alt+|=new_split:left
+keybind=ctrl+shift+'=new_split:down
+keybind=ctrl+shift+alt+'=new_split:up
+keybind=ctrl+shift+alt+tab=toggle_tab_overview
+
+# Unbinds
+keybind=ctrl+shift+enter=unbind
+keybind=super+ctrl+shift+up=unbind
+keybind=super+ctrl+shift+down=unbind
+keybind=super+ctrl+shift+right=unbind
+keybind=super+ctrl+shift+left=unbind
+keybind=ctrl+page_down=unbind
+
+

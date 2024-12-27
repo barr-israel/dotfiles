@@ -19,7 +19,6 @@ if status is-interactive
     alias n='nvim'
     alias yayu='yay --noconfirm'
     alias ls='lsd -lh'
-    alias imgcat='wezterm imgcat'
     alias yayfile='yay -F'
     fzf_key_bindings
 end
