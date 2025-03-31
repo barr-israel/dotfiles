@@ -100,7 +100,7 @@
     "memory": {
         "interval": 30,
         "format": "  {used:0.2f} / {total:0.0f} GB",
-        "on-click": "ghostty -e btop"
+        "on-click": "ghostty -e btop --utf-force"
     },
 
     "battery": {
