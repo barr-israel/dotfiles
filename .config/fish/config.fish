@@ -40,4 +40,3 @@ end
 #    set_color normal
 #end
 set EDITOR nvim
-pyenv init - | source

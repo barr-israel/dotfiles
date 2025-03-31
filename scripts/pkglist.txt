@@ -1,15 +1,12 @@
 fish
 ghostty
-pyenv
 libreoffice-still
 bat
 ripgrep
 neovim
 btop
-nvtop
 nextcloud-client
 keepassxc
-mpv
 qbittorrent
 fd
 fzf
@@ -20,3 +17,5 @@ kolourpaint
 bat-extra
 entr
 chafa
+tailscale
+blueman
