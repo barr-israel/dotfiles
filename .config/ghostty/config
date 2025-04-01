@@ -11,6 +11,7 @@ window-padding-y=0
 window-padding-balance=true
 mouse-scroll-multiplier=0.5
 auto-update=off
+command = /usr/local/bin/fish --login --interactive
 
 # Keybinds
 keybind=ctrl+shift+physical:z=toggle_split_zoom

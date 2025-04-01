@@ -20,6 +20,7 @@ if status is-interactive
     alias yayu='yay --noconfirm'
     alias ls='lsd -lh'
     alias yayfile='yay -F'
+    export editor='nvim'
     fzf_key_bindings
 end
 #function fish_right_prompt

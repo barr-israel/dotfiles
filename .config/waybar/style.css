@@ -73,8 +73,7 @@ window#waybar.hidden {
 
 #clock,
 #battery,
-#cpu,
-#memory,
+#system,
 #disk,whitespace
 #temperature,
 #backlight,
