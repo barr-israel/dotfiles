@@ -29,6 +29,7 @@
         "custom/screenshot_t",
         "hyprland/language",
         "network",
+        "battery",
         "custom/power"
     ],
 
@@ -39,8 +40,8 @@
 
     "group/system": {
         "orientation":"inherit",
+        "on-click": "ghostty -e btop --utf-force",
         "modules":["cpu","memory"],
-        "on-click": "ghostty -e btop --utf-force"
     },
 
 
@@ -60,6 +61,7 @@
     "memory": {
         "interval": 30,
         "format": "  {used:0.2f} / {total:0.0f} GB",
+        "on-click": "ghostty -e btop --utf-force",
     },
 
     "battery": {
@@ -139,6 +141,7 @@
     "cpu": {
         "interval": 1,
         //"format": " {}%", // Icon: microchip
+        "on-click": "ghostty -e btop --utf-force",
         "format": "{max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
         "max-length": 13,
         "min-length": 13
