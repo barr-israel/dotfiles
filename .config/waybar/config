@@ -14,6 +14,7 @@
     "spacing": 5, // Gaps between modules (4px)
 
     "modules-left": [
+      "custom/power",
         "custom/rofi",
       "tray",
         "hyprland/workspaces",
@@ -30,7 +31,6 @@
         "hyprland/language",
         "network",
         "battery",
-        "custom/power"
     ],
 
 
@@ -60,7 +60,7 @@
 
     "memory": {
         "interval": 30,
-        "format": "  {used:0.2f} / {total:0.0f} GB",
+        "format": "{used:0.2f} / {total:0.0f} GB",
         "on-click": "ghostty -e btop --utf-force",
     },
 
@@ -84,8 +84,8 @@
     },
     "network": {
         "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}",
+        "format-linked": "  {ifname} (No IP)",
         "format": "",
         "format-disconnected": "",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
@@ -133,16 +133,15 @@
 
     "clock": {
         "interval": 1,
-        "format": "󰥔   {:%T    %F}",
+        "format": "󰥔 {:%T  %F}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "today-format": "<b>{}</b>"
     },
 
     "cpu": {
         "interval": 1,
-        //"format": " {}%", // Icon: microchip
         "on-click": "ghostty -e btop --utf-force",
-        "format": "{max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
+        "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
         "max-length": 13,
         "min-length": 13
     },
