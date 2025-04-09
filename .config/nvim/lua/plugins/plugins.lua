@@ -24,6 +24,7 @@ return {
       picker = {
         sources = {
           explorer = {
+            auto_close = true,
             jump = { close = true },
             layout = { preset = "default", preview = true },
           },
@@ -31,6 +32,15 @@ return {
             layout = { preset = "default" },
           },
         },
+      },
+    },
+    keys = {
+      {
+        "<leader>fe",
+        function()
+          Snacks.explorer({ cwd = vim.fn.expand("%:p:h") })
+        end,
+        desc = "Explorer Snacks (current buffer dir)",
       },
     },
   },
