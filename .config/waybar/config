@@ -87,7 +87,7 @@
         "format-ethernet": "  {ifname}: {ipaddr}/{cidr}",
         "format-linked": "  {ifname} (No IP)",
         "format": "",
-        "format-disconnected": "",
+        "format-disconnected": "",
         "on-click": "ghostty -e nmtui",
         "on-click-right": "blueman-manager",
         "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
