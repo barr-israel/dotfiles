@@ -1,3 +1,4 @@
+local HOME = os.getenv("HOME")
 return {
   {
     "mbbill/undotree",
@@ -41,6 +42,17 @@ return {
           Snacks.explorer({ cwd = vim.fn.expand("%:p:h") })
         end,
         desc = "Explorer Snacks (current buffer dir)",
+      },
+    },
+  },
+  {
+    "mfussenegger/nvim-lint",
+    optional = true,
+    opts = {
+      linters = {
+        ["markdownlint-cli2"] = {
+          args = { "--config", HOME .. ".config/nvim/.markdownlint-cli2.yaml", "--" },
+        },
       },
     },
   },
