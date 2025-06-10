@@ -139,7 +139,7 @@
 
     "cpu": {
         "interval": 1,
-        "on-click": "ghostty -e btop --utf-force",
+        "on-click": "ghostty -e btop --force-utf",
         "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
         "max-length": 13,
         "min-length": 13
