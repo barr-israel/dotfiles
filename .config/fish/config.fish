@@ -20,6 +20,7 @@ if status is-interactive
     alias yayu='yay --noconfirm'
     alias ls='lsd -lh'
     alias yayfile='yay -F'
+    alias btop='btop --force-utf'
     export editor='nvim'
     fzf_key_bindings
 end
