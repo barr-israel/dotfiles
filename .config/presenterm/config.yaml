@@ -4,7 +4,7 @@ defaults:
   # override the terminal font size when in windows or when using sixel.
   terminal_font_size: 16
   # the theme to use by default in every presentation unless overridden.
-  theme: dark
+  theme: tokyonight-storm
   # the image protocol to use.
   image_protocol: kitty-local
 typst:
@@ -26,6 +26,8 @@ options:
   strict_front_matter_parsing: false
   # whether to treat a thematic break as a slide end.
   end_slide_shorthand: true
+  # how many empty lines to put between list items
+  list_item_newlines: 2
 snippet:
   exec:
     # enable code snippet execution. Use at your own risk!

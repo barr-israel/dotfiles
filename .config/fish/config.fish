@@ -21,6 +21,8 @@ if status is-interactive
     alias ls='lsd -lh'
     alias yayfile='yay -F'
     alias btop='btop --force-utf'
+    alias icat='kitten icat'
+    alias ssh='kitten ssh'
     export editor='nvim'
     fzf_key_bindings
 end
