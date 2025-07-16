@@ -1,0 +1,20 @@
+configuration {
+	modes: "drun,window,ssh,calc";
+  history: false;
+	show-icons: true;
+	terminal: "kitty";
+	ssh-client: "kitten ssh";
+	sidebar-mode: true;
+	click-to-exit: true;
+  kb-element-next: "";
+  kb-mode-next: "Tab,Shift+Right";
+  kb-mode-previous: "Ctrl+Tab,Shift+Left";
+  ssh {
+      client: "kitten ssh";
+  }
+  calc {
+    no-persist-history: true;
+  }
+}
+
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
