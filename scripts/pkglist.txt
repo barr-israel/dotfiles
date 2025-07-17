@@ -13,10 +13,11 @@ qbittorrent
 fd
 fzf
 lazygit
-lsd
-tree
+eza
 kolourpaint
 bat-extra
 entr
 tailscale
 blueman
+rofi-calc
+delta

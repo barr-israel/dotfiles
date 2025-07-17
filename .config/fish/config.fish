@@ -18,11 +18,13 @@ if status is-interactive
     alias find='fd'
     alias n='nvim'
     alias yayu='yay --noconfirm'
-    alias ls='lsd -lh'
+    alias ls='eza -lh --icons'
     alias yayfile='yay -F'
     alias btop='btop --force-utf'
     alias icat='kitten icat'
     alias ssh='kitten ssh'
+    alias tree='eza --icons -T'
+    alias diff='delta --side-by-side'
     export editor='nvim'
     fzf_key_bindings
 end

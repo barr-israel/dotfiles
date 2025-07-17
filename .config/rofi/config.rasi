@@ -1,6 +1,5 @@
 configuration {
 	modes: "drun,window,ssh,calc";
-  history: false;
 	show-icons: true;
 	terminal: "kitty";
 	ssh-client: "kitten ssh";

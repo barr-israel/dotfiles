@@ -1,0 +1,17 @@
+[user]
+	email = barr@barrisrael.com
+	name = Barr
+[credential]
+	helper = store
+[push]
+	autoSetupRemote = true
+[core]
+  editor = nvim
+  pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+  navigate = true
+  dark = true
+[merge]
+  conflictstyle = zdiff3
