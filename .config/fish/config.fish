@@ -24,7 +24,7 @@ if status is-interactive
     alias icat='kitten icat'
     alias ssh='kitten ssh'
     alias tree='eza --icons -T'
-    alias diff='delta --side-by-side'
+    alias diff='delta --side-by-side --line-numbers'
     export editor='nvim'
     fzf_key_bindings
 end

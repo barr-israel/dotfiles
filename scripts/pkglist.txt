@@ -21,3 +21,5 @@ tailscale
 blueman
 rofi-calc
 delta
+ripgrep-all
+grimblast-git
