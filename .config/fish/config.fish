@@ -25,6 +25,7 @@ if status is-interactive
     alias ssh='kitten ssh'
     alias tree='eza --icons -T'
     alias diff='delta --side-by-side --line-numbers'
+    alias yayc='yay -Rsn $(yay -Qdtq)'
     export editor='nvim'
     fzf_key_bindings
 end
