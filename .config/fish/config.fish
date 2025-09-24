@@ -26,6 +26,8 @@ if status is-interactive
     alias tree='eza --icons -T'
     alias diff='delta --side-by-side --line-numbers'
     alias yayc='yay -Rsn $(yay -Qdtq)'
+    alias yaycache='yay -Scc'
+    alias imgsave='wl-paste -t image/png >'
     export editor='nvim'
     fzf_key_bindings
 end
