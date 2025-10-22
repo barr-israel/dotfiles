@@ -40,7 +40,7 @@
 
     "group/system": {
         "orientation":"inherit",
-        "on-click": "ghostty -e btop --force-utf",
+        "on-click": "kitty btop --force-utf",
         "modules":["cpu","memory"],
     },
 
@@ -61,7 +61,7 @@
     "memory": {
         "interval": 30,
         "format": "{used:0.2f} / {total:0.0f} GB",
-        "on-click": "ghostty -e btop --force-utf",
+        "on-click": "kitty btop --force-utf",
     },
 
     "battery": {
@@ -88,7 +88,7 @@
         "format-linked": "  {ifname} (No IP)",
         "format": "",
         "format-disconnected": "",
-        "on-click": "ghostty -e nmtui",
+        "on-click": "kitty nmtui",
         "on-click-right": "blueman-manager",
         "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
         "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
@@ -139,7 +139,7 @@
 
     "cpu": {
         "interval": 1,
-        "on-click": "ghostty -e btop --force-utf",
+        "on-click": "kitty btop --force-utf",
         "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
         "max-length": 13,
         "min-length": 13

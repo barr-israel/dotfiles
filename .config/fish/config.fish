@@ -28,6 +28,7 @@ if status is-interactive
     alias yayc='yay -Rsn $(yay -Qdtq)'
     alias yaycache='yay -Scc'
     alias imgsave='wl-paste -t image/png >'
+    alias idiff='nvim -d'
     export editor='nvim'
     fzf_key_bindings
 end

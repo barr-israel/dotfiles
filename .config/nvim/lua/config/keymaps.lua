@@ -13,4 +13,8 @@ vim.keymap.set("n", "R", ":s/", { desc = "Replace in line" })
 vim.keymap.set("v", "R", 'y:%s/<c-r>"/', { desc = "Replace selection" })
 vim.keymap.set("n", "<c-r>", ":%s/", { desc = "Replace" })
 vim.keymap.set("v", "<c-r>", ":s/", { desc = "Replace in selection" })
-vim.keymap.set("n", "U", ":red<CR>", { desc = "Redo" })
+vim.keymap.set("n", "U", ":redo<CR>", { desc = "Redo" })
+if vim.api.nvim_get_option_value("diff", {}) then
+  vim.keymap.set("n", "u", ":bufdo u<CR>", { desc = "Undo" })
+  vim.keymap.set("n", "U", ":bufdo :redo<CR>", { desc = "Redo" })
+end
