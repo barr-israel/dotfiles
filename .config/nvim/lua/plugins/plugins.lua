@@ -1,6 +1,13 @@
 local HOME = os.getenv("HOME")
 return {
   {
+    "lervag/vimtex",
+    init = function()
+      -- VimTeX configuration goes here, e.g.
+      vim.g.vimtex_view_method = "zathura"
+    end,
+  },
+  {
     "mbbill/undotree",
     config = function()
       vim.g["undotree_SetFocusWhenToggle"] = 1

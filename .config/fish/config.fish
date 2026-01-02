@@ -29,6 +29,10 @@ if status is-interactive
     alias yaycache='yay -Scc'
     alias imgsave='wl-paste -t image/png >'
     alias idiff='nvim -d'
+    alias ga='git add'
+    alias gc='git commit'
+    alias gp='git push'
+    alias gch='git checkout'
     export editor='nvim'
     fzf_key_bindings
 end
