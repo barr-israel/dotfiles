@@ -1,0 +1,21 @@
+vim.g.mapleader = " "
+local o = vim.opt
+o.timeoutlen = 100
+o.number = true
+o.relativenumber = true
+o.cursorline = true
+o.expandtab = true
+o.smartindent = true
+o.autoindent = true
+o.ignorecase = true
+o.smartcase = true
+o.hlsearch = true
+o.incsearch = true
+o.confirm = true
+o.undofile = true
+o.autoread = true
+o.mouse = "a"
+o.autocomplete = false
+o.clipboard = "unnamedplus"
+vim.lsp.inlay_hint.enable()
+vim.g.autoformat = true

@@ -1,0 +1,40 @@
+local lsp_format_group = vim.api.nvim_create_augroup("LspAutoFormat", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePre", {
+	group = lsp_format_group,
+	callback = function(event)
+		local client = vim.lsp.get_clients({ bufnr = event.buf })[1]
+		if client and client.supports_method("textDocument/formatting") then
+			vim.lsp.buf.format({ async = false })
+		end
+	end,
+})
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "*",
+	callback = function()
+		-- Safely attempt to start treesitter for the current buffer
+		pcall(vim.treesitter.start)
+	end,
+})
+-- vim.api.nvim_create_autocmd("LspAttach", {
+-- 	group = vim.api.nvim_create_augroup("lsp_completion", { clear = true }),
+-- 	callback = function(args)
+-- 		local client_id = args.data.client_id
+-- 		if not client_id then
+-- 			return
+-- 		end
+--
+-- 		local client = vim.lsp.get_client_by_id(client_id)
+-- 		if client and client:supports_method("textDocument/completion") then
+-- 			-- Enable native LSP completion for this client + buffer
+-- 			vim.lsp.completion.enable(true, client_id, args.buf, {
+-- 				autotrigger = true, -- auto-show menu as you type (recommended)
+-- 				-- You can also set { autotrigger = false } and trigger manually with <C-x><C-o>
+-- 			})
+-- 		end
+-- 	end,
+-- })
