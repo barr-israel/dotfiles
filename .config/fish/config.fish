@@ -1,4 +1,5 @@
 if status is-interactive
+    fish_add_path /home/barr/.local/bin
     set FZF_CTRL_T_COMMAND fd
     set FZF_ALT_C_COMMAND 'fd --type d'
     export FZF_CTRL_T_OPTS="
@@ -14,16 +15,16 @@ if status is-interactive
     alias dotfilesu='dotfiles diff --name-only && dotfiles pull && dotfiles add -u && dotfiles commit -m "dotfiles update" && dotfiles push'
     alias clear='clear && fastfetch --load-config paleofetch'
     alias cat='bat'
-    alias grep='rg'
-    alias find='fd'
+    # alias grep='rg'
+    # alias find='fd'
     alias n='nvim'
     alias yayu='yay --noconfirm'
-    alias ls='eza -lh --icons'
+    alias ls='eza -lh --icons=auto'
     alias yayfile='yay -F'
     alias btop='btop --force-utf'
     alias icat='kitten icat'
     alias ssh='kitten ssh'
-    alias tree='eza --icons -T'
+    alias tree='eza --icons=auto -T'
     alias diff='delta --side-by-side --line-numbers'
     alias yayc='yay -Rsn $(yay -Qdtq)'
     alias yaycache='yay -Scc'

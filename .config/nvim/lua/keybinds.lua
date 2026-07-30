@@ -20,6 +20,13 @@ s("n", "<leader>q", vim.cmd.qa, "Quit neovim")
 s("n", "<C-u>", require("undotree").open, "Toggle Undo Tree")
 s("n", "<S-u>", vim.cmd.redo, "Redo")
 s("n", "<leader>cf", vim.lsp.buf.format, "Format Current Buffer")
+s("n", "yp", function()
+	local file = vim.fn.expand("%:.") -- Relative path
+	local line = vim.fn.line(".")
+	local result = file .. ":" .. line
+	vim.fn.setreg("+", result)
+	print("Copied: " .. result)
+end)
 
 -- find & replace
 s("n", "R", ":s/", "Replace in line")
@@ -27,9 +34,9 @@ s("v", "R", 'y:%s/<c-r>"/', "Replace selection")
 s("n", "<c-r>", ":%s/", "Replace")
 s("v", "<c-r>", ":s/", "Replace in selection")
 
-s(all, "<C-S-S>", function()
+s(all, "<C-M-s>", function()
 	vim.cmd.stopinsert()
-	vim.cmd.command("noautocmd update")
+	vim.cmd("noautocmd update")
 end, "Save Buffer Without Formatting")
 s(all, "<C-s>", function()
 	vim.cmd.stopinsert()
@@ -48,6 +55,12 @@ s("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", "Mo
 -- buffers
 s("n", "<leader>bb", "<cmd>e #<cr>", "Switch to Other Buffer")
 s("n", "<C-w>", vim.cmd.bd, "Delete current buffer")
+s("n", "<leader>cq", function()
+	vim.fn.setqflist({})
+	vim.cmd.cclose()
+end, "Clear Quickfix")
+s("n", "]q", vim.cmd.cnext, "Next Quickfix")
+s("n", "[q", vim.cmd.cprev, "Prev Quickfix")
 -- core
 s("n", { "<leader>/", "<leader>sg" }, Snacks.picker.grep, "Grep (Root Dir)")
 s("n", { "<leader>:", "<leader>sc" }, Snacks.picker.command_history, "Command History")
@@ -104,16 +117,32 @@ s("n", "<leader>sl", Snacks.picker.loclist, "Location List")
 s("n", "<leader>sM", Snacks.picker.man, "Man Pages")
 s("n", "<leader>sm", Snacks.picker.marks, "Marks")
 s("n", "<leader>sq", Snacks.picker.qflist, "Quickfix List")
+s("n", "<leader>ss", Snacks.picker.lsp_symbols, "LSP Symbols")
 
 -- ui
 s("n", "<leader>uC", Snacks.picker.colorschemes, "Colorschemes")
 
 -- lsp
--- s("i", "<C-Space>", vim.lsp.completion.get, "Trigger Autocomplete")
+-- Example: Open diagnostics in a floating window
+s("n", "<leader>cd", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 s("n", "<leader>cl", Snacks.picker.lsp_config, "Lsp Info")
 
+local function diagnostic_goto(next, severity)
+	return function()
+		vim.diagnostic.jump({
+			count = next and 1 or -1,
+			severity = severity and vim.diagnostic.severity[severity] or nil,
+		})
+	end
+end
+
+s("n", "]e", diagnostic_goto(true, "ERROR"), "Next Error")
+s("n", "[e", diagnostic_goto(false, "ERROR"), "Prev Error")
+s("n", "]w", diagnostic_goto(true, "WARN"), "Next Warning")
+s("n", "[w", diagnostic_goto(false, "WARN"), "Prev Warning")
+
 s("n", "gd", vim.lsp.buf.definition, "Goto Definition")
-s("n", "gr", vim.lsp.buf.references, "References")
+s("n", "gr", Snacks.picker.lsp_references, "References")
 s("n", "gI", vim.lsp.buf.implementation, "Goto Implementation")
 s("n", "gy", vim.lsp.buf.type_definition, "Goto T[y]pe Definition")
 s("n", "gD", vim.lsp.buf.declaration, "Goto Declaration")
