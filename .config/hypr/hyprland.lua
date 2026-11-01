@@ -134,7 +134,7 @@ hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 }
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 
 -- Default springs
-hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, damping = 15.8273644 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
@@ -217,12 +217,15 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd(menu))
+-- Tap SUPER on its own to open the runner. Must fire on release: as a press
+-- bind it triggers the moment SUPER goes down, so every SUPER+<key> shortcut
+-- would open the runner too.
+hl.bind(mainMod .. " + SUPER_L", hl.dsp.exec_cmd(menu), { release = true })
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd(windowswitcher))
 hl.bind(mainMod .. " + P", hl.dsp.window.pin())
 hl.bind(mainMod .. " + R", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(capture))
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen("maximized", "toggle"))
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen("maximized"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
